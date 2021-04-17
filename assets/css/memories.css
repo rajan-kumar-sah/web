@@ -1,0 +1,83 @@
+body{
+  font-family: "Montserrat", sans-serif;
+}
+
+.main-wrapper {
+  padding: 50px 0;
+}
+
+img {
+  cursor: pointer;
+}
+
+.img-wrapper {
+  margin: 10px 0;
+  transition: left 1s linear;
+}
+
+.img-wrapper .img-item{
+  overflow: hidden;
+}
+
+.img-wrapper .img-item img{
+  transition: all ease-in 0.1s;
+}
+
+.img-wrapper .img-item img:hover{
+  transform: scale(1.1);
+}
+
+.gallary-bg {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000000c7;
+  display: none;
+  cursor: pointer;
+}
+
+.gallary-bg-block {
+  display: block;
+}
+
+.gallary-bg-block .img-item {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.gallary-bg .img-item > img {
+  transition: all ease-in 0.5s;
+  transform: scale(0);
+}
+
+.gallary-bg-block .img-item > img {
+  transform: scale(1);
+  padding: 5px;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+
+.img-magnifier-glass {
+  position: absolute;
+  border: 3px solid #000;
+  border-radius: 50%;
+  cursor: none;
+  /*Set the size of the magnifier glass:*/
+  width: 200px;
+  height: 200px;
+  z-index: 999999;
+}
+
+.img-magnifier-glass:after {
+    content: url(https://cdn3.iconfinder.com/data/icons/virtual-notebook/16/button_shape_line-512.png);
+    height: 50px;
+    width: 46px;
+    position: absolute;
+    transform: scale(0.3) rotate(61deg);
+    right: -30px;
+    bottom: 22px;
+}
